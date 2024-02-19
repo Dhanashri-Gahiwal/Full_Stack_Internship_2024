@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <!-- Form -->
+    <form action="form.html" method="post">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required><br>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required><br>
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password" required><br>
+        <label for="mobile">Mobile No.</label>
+        <input type="tel" id="mobile" name="mobile" placeholder="Enter your mobile no." required><br>
+        <label for="age">Age</label>
+        <input type="number" id="age" name="age" min="21" max="30" required><br>
+        <label for="dob">Date of Birth</label>
+        <input type="date" id="dob" name="dob" placeholder="Enter your date of birth" required><br>
+        <label for="gender">Gender</label>
+        <input type="radio" id="gender" name="gender">Male
+        <input type="radio" id="gender" name="gender">Female <br>
+        <label for="address">Address</label>
+        <textarea name="address" id="address" cols="30" rows="10" placeholder="Enter your address" required></textarea> <br>
+        <label for="intertime">Internship Time</label>
+        <input type="datetime" id="intertime" name="intertime" value="08:30" disabled><br>
+    </form>
+</body>
+</html>

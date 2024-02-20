@@ -1,48 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Form</title>
-</head>
-<body>
+  </head>
+  <body>
     <!-- Form -->
-    <form action="form.html" method="post">
+    <fieldset>
+      <legend>User Information</legend>
+      <form action="form.html" method="post">
         <label for="name">Name</label>
-        <input type="text" id="name" name="name" placeholder="Enter your name" required><br>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Enter your name"
+          required
+        /><br />
         <label for="email">Email</label>
-        <input type="email" id="email" name="email" placeholder="Enter your email" required><br>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Enter your email"
+          required
+        /><br />
         <label for="password">Password</label>
-        <input type="password" id="password" name="password" placeholder="Enter your password" required><br>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          placeholder="Enter your password"
+          required
+        /><br />
         <label for="mobile">Mobile No.</label>
-        <input type="tel" id="mobile" name="mobile" placeholder="Enter your mobile no." required><br>
+        <input
+          type="tel"
+          id="mobile"
+          name="mobile"
+          placeholder="Enter your mobile no."
+          required
+        /><br />
         <label for="age">Age</label>
-        <input type="number" id="age" name="age" min="21" max="30" required><br>
+        <input
+          type="number"
+          id="age"
+          name="age"
+          min="21"
+          max="30"
+          required
+        /><br />
         <label for="dob">Date of Birth</label>
-        <input type="date" id="dob" name="dob" placeholder="Enter your date of birth" required><br>
+        <input
+          type="date"
+          id="dob"
+          name="dob"
+          placeholder="Enter your date of birth"
+          required
+        /><br />
         <label for="gender">Gender</label>
-        <input type="radio" id="gender" name="gender">Male
-        <input type="radio" id="gender" name="gender">Female <br>
+        <input type="radio" id="gender" name="gender" />Male
+        <input type="radio" id="gender" name="gender" />Female <br />
         <label for="address">Address</label>
-        <textarea name="address" id="address" cols="30" rows="10" placeholder="Enter your address" required></textarea> <br>
+        <textarea
+          name="address"
+          id="address"
+          cols="30"
+          rows="10"
+          placeholder="Enter your address"
+          required
+        ></textarea>
+        <br />
         <label for="intertime">Internship Time</label>
-        <input type="datetime" id="intertime" name="intertime" value="08:30" disabled><br>
+        <input
+          type="datetime"
+          id="intertime"
+          name="intertime"
+          value="08:30"
+          disabled
+        /><br />
         <label for="hobbies">Hobbies</label>
-        <input type="checkbox" name="hobbies" id="hobbies" value="hobby1">Drawing
-        <input type="checkbox" name="hobbies" id="hobbies" value="hobby2">Dancing
-        <input type="checkbox" name="hobbies" id="hobbies" value="hobby3">Reading
-        <input type="checkbox" name="hobbies" id="hobbies" value="hobby4">Writing <br>
+        <input
+          type="checkbox"
+          name="hobbies"
+          id="hobbies"
+          value="hobby1"
+        />Drawing
+        <input
+          type="checkbox"
+          name="hobbies"
+          id="hobbies"
+          value="hobby2"
+        />Dancing
+        <input
+          type="checkbox"
+          name="hobbies"
+          id="hobbies"
+          value="hobby3"
+        />Reading
+        <input
+          type="checkbox"
+          name="hobbies"
+          id="hobbies"
+          value="hobby4"
+        />Writing <br />
         <label for="color">Favourite Color</label>
-        <input type="color" name="color" id="color"> <br>
+        <input type="color" name="color" id="color" /> <br />
         <label for="resume">Attach your resume</label>
-        <input type="file" id="file" name="file"> <br>
+        <input type="file" id="file" name="file" /> <br />
         <label for="certificates">Attach your certificates</label>
-        <input type="file" id="certificates" name="certificates" multiple> <br>
+        <input type="file" id="certificates" name="certificates" multiple />
+        <br />
         <label for="portfolio">Portfolio URL</label>
-        <input type="url" name="portfolio" id="portfolio"> <br> <br>
-        <input type="submit" value="submit">
-        <input type="reset" value="reset">
-
-    </form>
-</body>
+        <input type="url" name="portfolio" id="portfolio" /> <br />
+        <label for="courses">Courses</label>
+        <select name="courses" id="courses">
+          <option value="Java">Java</option>
+          <option value="Python" selected>Python</option>
+        </select>
+        <br /><br />
+        <input type="submit" value="submit" />
+        <input type="reset" value="reset" />
+      </form>
+    </fieldset>
+  </body>
 </html>

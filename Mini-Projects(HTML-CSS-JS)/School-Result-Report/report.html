@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>School Result Report</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container mt-3">
+
+      <div class="report mx-5 p-4">
+
+        <div class="row justify-content-between border border-dark p-4">
+          <div class="col-2">
+            <img src="Msbte.png" alt="MSBTE Logo" />
+          </div>
+          <div class="col-10 text-center align-content-center">
+            <h1>Mahatma Phule High School Bej</h1>
+            <h3>A/P-Juni Bej, Tal.-Kalwan, Dist.-Nashik 423501</h3>
+          </div>
+        </div>
+
+        <div class="row border border-dark border-top-0 py-2">
+          <div class="col-12 text-center align-content-center">
+            <h3 style="font-weight: 800;">REPORT CARD : 2023-24</h3>
+          </div>
+        </div>
+
+        <div class="row py-0">
+          <div class="col-4 text-center border border-dark border-top-0">
+            <p id="adm"><strong>Admission No. : </strong></p>
+          </div>
+          <div class="col-4 text-center border-bottom border-dark">
+            <p id="cls"><strong>Class : </strong></p>
+          </div>
+          <div class="col-4 text-center border border-dark border-top-0">
+            <p id="roll"><strong>Roll No. : </strong></p>
+          </div>
+        </div>
+
+        <div class="row border border-dark border-top-0 py-2">
+          <div class="col-12">
+            <div class="row justify-content-around">
+              <div class="col-5">
+                <p id="sname"><strong>Student's Name : </strong></p>
+                <p id="fname"><strong>Father's Name : </strong></p>
+              </div>
+              <div class="col-5">
+                <p id="mname"><strong>Mother's Name : </strong></p>
+                <p id="dob"><strong>Date Of Birth : </strong></p>
+              </div>
+              <div class="col-12 text-center">
+                <p id="addr"><strong>Address : </strong></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 px-5 my-3">
+            <table class="table table-bordered text-center">
+              <thead>
+                <tr>
+                  <th scope="col">Subject</th>
+                  <th scope="col">Total Marks</th>
+                  <th scope="col">Marks Obtained</th>
+                  <th scope="col">Grade</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>English</td>
+                  <td>100</td>
+                  <td id="engm"></td>
+                  <td id="engg"></td>
+                </tr>
+                <tr>
+                  <td>Hindi</td>
+                  <td>100</td>
+                  <td id="hm"></td>
+                  <td id="hg"></td>
+                </tr>
+                <tr>
+                  <td>Marathi</td>
+                  <td>100</td>
+                  <td id="mm"></td>
+                  <td id="mg"></td>
+                </tr>
+                <tr>
+                  <td>Mathematics</td>
+                  <td>100</td>
+                  <td id="mathm"></td>
+                  <td id="mathg"></td>
+                </tr>
+                <tr>
+                  <td>Science</td>
+                  <td>100</td>
+                  <td id="sm"></td>
+                  <td id="sg"></td>
+                </tr>
+                <tr>
+                  <td>Social Science</td>
+                  <td>100</td>
+                  <td id="ssm"></td>
+                  <td id="ssg"></td>
+                </tr>
+                <tr>
+                  <td>Drawing</td>
+                  <td>100</td>
+                  <td id="dm"></td>
+                  <td id="dg"></td>
+                </tr>
+                <tr>
+                  <td>Enviornment</td>
+                  <td>100</td>
+                  <td id="em"></td>
+                  <td id="eg"></td>
+                </tr>
+                <tr>
+                  <td>PT</td>
+                  <td>100</td>
+                  <td id="pm"></td>
+                  <td id="pg"></td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>Total</th>
+                  <th>900</th>
+                  <th id="totalm"></th>
+                  <th id="totalg"></th>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+
+          <div class="col-12">
+            <div class="row justify-content-around text-center">
+              <div class="col-3">
+                <div class="row">
+                  <div class="col-4">
+                    <p><strong>Pass/Fail:</strong></p>
+                  </div>
+                  <div class="col-2">
+                    <p id="pf"></p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-3">
+                <div class="row">
+                  <div class="col-5">
+                    <p><strong>Percentage:</strong></p>
+                  </div>
+                  <div class="col-2">
+                    <p id="per"></p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-3">
+                <div class="row justify-content-center">
+                  <div class="col-3">
+                    <p><strong>Grade:</strong></p>
+                  </div>
+                  <div class="col-2">
+                    <p id="grade"></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 px-5 my-3">
+            <table class="table table-bordered text-center">
+              <thead>
+                <tr>
+                  <th scope="col" colspan="9">Grading System</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">Letter Grade</th>
+                  <td>O</td>
+                  <td>A+</td>
+                  <td>A</td>
+                  <td>B+</td>
+                  <td>B</td>
+                  <td>C</td>
+                  <td>D</td>
+                  <td>F</td>
+                </tr>
+                <tr>
+                  <th scope="row">Number Grade</th>
+                  <td>10</td>
+                  <td>9</td>
+                  <td>8</td>
+                  <td>7</td>
+                  <td>6</td>
+                  <td>5</td>
+                  <td>4</td>
+                  <td>0</td>
+                </tr>
+                <tr>
+                  <th scope="row">Number Grade</th>
+                  <td>91-100</td>
+                  <td>81-90</td>
+                  <td>71-80</td>
+                  <td>61-70</td>
+                  <td>51-60</td>
+                  <td>41-50</td>
+                  <td>35-40</td>
+                  <td>0-34</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+    <script src="script.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

@@ -1,0 +1,70 @@
+.container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    width: 60%;
+    margin: auto;
+}
+
+.navbar {
+    background: linear-gradient(80deg, rgba(73,9,121,1) 23%, rgba(141,6,164,1) 61%, rgba(162,6,164,1) 100%);
+}
+.navbar,
+.navbar-brand,
+.nav-link {
+    color: whitesmoke !important;
+}
+
+.navbar-brand {
+    font-family: "Seymour One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.nav-item {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.container-fluid .hero {
+    /* background-image: url('./images/herobg.jpg'); */
+    background: linear-gradient(rgba(132, 110, 184, 0.651), rgba(132, 110, 184, 0.651)), url('./images/herobg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: whitesmoke;
+}
+
+.container-fluid .hero h1 {
+    font-size: 5rem;
+    font-weight: 800;
+}
+
+.container-fluid .hero p {
+    font-size: 2.3rem;
+    font-weight: 500;
+}
+
+.container-fluid .main h2 {
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+.jumbotron {
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: aliceblue;
+}

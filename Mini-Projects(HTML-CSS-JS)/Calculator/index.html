@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Calculator</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <style>
+      body {
+        background: linear-gradient(
+          to bottom right,
+          rgba(5, 240, 248, 0.712) 40%,
+          rgba(19, 181, 245, 0.829)        
+        );
+      }
+      .container {
+        height: 100vh;
+        flex-direction: column;
+        row-gap: 10px;
+      }
+      h1 {
+        text-transform: uppercase;
+        color: rgb(187, 179, 179);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container d-flex justify-content-center align-items-center">
+      <h1>Calculator</h1>
+        <table class="table table-success table-striped table-bordered w-50">
+          <tbody class="text-center">
+            <tr>
+              <td colspan="3" id="result"></td>
+              <td onclick="reset()" class="py-3">C</td>
+            </tr>
+            <tr>
+              <td id="n1" onclick="display('1')" class="py-3">1</td>
+              <td id="n2" onclick="display('2')">2</td>
+              <td id="n3" onclick="display('3')">3</td>
+              <td id="div" onclick="display('/')">/</td>
+            </tr>
+            <tr>
+              <td id="n4" onclick="display('4')" class="py-3">4</td>
+              <td id="n5" onclick="display('5')">5</td>
+              <td id="n6" onclick="display('6')">6</td>
+              <td id="sub" onclick="display('-')">-</td>
+            </tr>
+            <tr>
+              <td id="n7" onclick="display('7')" class="py-3">7</td>
+              <td id="n8" onclick="display('8')">8</td>
+              <td id="n9" onclick="display('9')">9</td>
+              <td id="add" onclick="display('+')">+</td>
+            </tr>
+            <tr>
+              <td id="nd" onclick="display('.')" class="py-3">.</td>
+              <td id="n0" onclick="display('0')">0</td>
+              <td onclick="calculate()">=</td>
+              <td id="mul" onclick="display('*')">*</td>
+            </tr>
+          </tbody>
+        </table>
+    </div>
+    <script>
+      function reset(){
+        document.getElementById("result").innerHTML = "";
+      }
+
+      function display(innerHTML){
+       document.getElementById("result").innerHTML += innerHTML;
+      }
+
+      function calculate(){
+        var expression = document.getElementById("result").innerHTML;
+        var result = eval(expression);
+        document.getElementById("result").innerHTML += "="+result;
+      }
+    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

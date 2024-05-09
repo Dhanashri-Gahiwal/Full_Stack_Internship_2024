@@ -1,0 +1,59 @@
+step-1: create folder Django
+
+step-2: go to the django folder and write the "cmd" on location bar which is display on the top
+
+step-3: create virtual environment
+	" python -m venv my_venv "
+
+step-4: activate scripts
+	" my_venv\Scripts\activate "
+
+step-5: install django
+	" pip install django "
+
+step-6: check the version of django-admin
+	" django-admin version "
+
+step-7: create the django project
+	" django-admin startproject demo "
+
+step-8: go to the project folder
+	" cd demo "
+
+step-9: create python app
+	" python manage.py startapp myapp "
+
+step-10: run the project
+	" python manage.py runserver "
+
+step-11: migrate the project to apply changes
+	" python manage.py migrate "
+
+
+--------------------------------------------------------------------------------------------------------------------------
+
+steps after installation of django framework and after creation of app
+step-1: go to project setting file and add 'myapp'
+	INSTALLED_APPS = [
+	'myapp'
+	]
+
+step-2: go to project urls file and add the path of myapp
+	from django.urls import path, include
+
+	urlpatterns = [
+    		path("", include("myapp.urls"))
+	]
+	
+
+step-3: create one urls.py in myapp folder and import the path and views and add urlpattern given below
+	from django.urls import path
+	from . import views
+	urlpatterns = [
+    		path("",views.home,name="home")
+	]
+
+step-4: go to views.py file and create view and import HttpResponse
+	from django.http import HttpResponse
+	def home(request):
+    		return HttpResponse("Hello World");

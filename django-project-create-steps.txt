@@ -23,11 +23,11 @@ step-8: go to the project folder
 step-9: create python app
 	" python manage.py startapp myapp "
 
-step-10: run the project
-	" python manage.py runserver "
-
-step-11: migrate the project to apply changes
+step-10: migrate the project to apply changes
 	" python manage.py migrate "
+
+step-11: run the project
+	" python manage.py runserver "
 
 
 --------------------------------------------------------------------------------------------------------------------------
@@ -57,3 +57,64 @@ step-4: go to views.py file and create view and import HttpResponse
 	from django.http import HttpResponse
 	def home(request):
     		return HttpResponse("Hello World");
+
+
+--------------------------------------------------------------------------------------------------------------------------
+
+view html file
+step-1: create "templates" folder in myapp
+
+step-2: add html files in "templates" folder
+
+step-3: go to views.py file and create view
+	def home(request):
+		return render(request,"index.html")
+
+
+--------------------------------------------------------------------------------------------------------------------------
+
+read input from html file
+step-1: create "contact.html" file in "templates" folder and add form
+	<form action="user" method="get"> ......action="user"=>means view name
+	Name: <input type="text" name="name"/>
+	Mobile: <input type="number" name="mobile"/>
+	<button>Submit</button>
+	<form>
+
+step-2: create view in views.py file
+	def user(request):
+		name = request.GET["name"]
+		mobile = request.GET["mobile"]
+		return render(request,"welcome.html",{"name":name, "mobile":mobile})
+
+step-3: add urlpattern in urls.py file of myapp folder
+	path("contact",views.contact,name="contact"),
+	path("user",views.user,name="user")
+
+step-4: create "welcome.html" file in "templates" folder and get the data from contact form
+	{% block content %}
+	<h1>{{name}}</h1>
+	<h1>{{mobile}}</h1>
+	{% endblock %}
+
+
+--------------------------------------------------------------------------------------------------------------------------
+
+add ready template in django
+step-1: download the themplate you wants
+
+step-2: create "static" folder in "myapp" folder
+
+step-3: add "assets" and "forms" folders in "static" folder
+
+step-4: add below line in the last of "settings.py" file
+	STATICFILES_DIRS = [BASE_DIR/"static"] 	
+
+step-5: add "index.html" file from downloaded template in "templates" folder
+
+step-6: add below line in the top of "index.html" file
+	{% load static %}
+
+step-6: convert the links in static in "index.html"
+	ex.- <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css"> ...... convert this link into static
+	converted link in static = <link rel="stylesheet" href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css'%}">

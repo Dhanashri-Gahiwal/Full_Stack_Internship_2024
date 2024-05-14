@@ -45,3 +45,63 @@ function login(){
 
 var regUser = localStorage.getItem("username");
 document.getElementById("user").innerHTML = regUser;
+
+function bulbul(){
+    var sound = document.getElementById("bulbul-sound");
+    sound.play();
+}
+
+function crow(){
+    var sound = document.getElementById("crow-sound");
+    sound.play();
+}
+
+function cuckoo(){
+    var sound = document.getElementById("cuckoo-sound");
+    sound.play();
+}
+
+function eagle(){
+    var sound = document.getElementById("eagle-sound");
+    sound.play();
+}
+
+function kingfisher(){
+    var sound = document.getElementById("kingfisher-sound");
+    sound.play();
+}
+
+function mynah(){
+    var sound = document.getElementById("mynah-sound");
+    sound.play();
+}
+
+function ostrich(){
+    var sound = document.getElementById("ostrich-sound");
+    sound.play();
+}
+
+function parrot(){
+    var sound = document.getElementById("parrot-sound");
+    sound.play();
+}
+
+function peacock(){
+    var sound = document.getElementById("peacock-sound");
+    sound.play();
+}
+
+function pigeon(){
+    var sound = document.getElementById("pigeon-sound");
+    sound.play();
+}
+
+function sparrow(){
+    var sound = document.getElementById("sparrow-sound");
+    sound.play();
+}
+
+function swan(){
+    var sound = document.getElementById("swan-sound");
+    sound.play();
+}
